@@ -61,31 +61,33 @@ const BasicForm = (props) => {
 
   return (
     <form onSubmit={formSubmissionHandler}>
-      <div className={nameInputClasses}>
-        <label htmlFor="name">First Name</label>
-        <input
-          type="text"
-          id="name"
-          onChange={firstNameChangeHandler}
-          onBlur={firstNameBlurHandler}
-          value={firstNameValue}
-        />
-        {firstNameInputHasError && (
-          <p className="error-text">Please enter a first name.</p>
-        )}
-      </div>
-      <div className={lastNameInputClasses}>
-        <label htmlFor="name">Last Name</label>
-        <input
-          type="text"
-          id="name"
-          onChange={lastNameChangeHandler}
-          onBlur={lastNameBlurHandler}
-          value={lastNameValue}
-        />
-        {lastNameInputHasError && (
-          <p className="error-text">Please enter a last name.</p>
-        )}
+      <div className="control-group">
+        <div className={nameInputClasses}>
+          <label htmlFor="name">First Name</label>
+          <input
+            type="text"
+            id="name"
+            onChange={firstNameChangeHandler}
+            onBlur={firstNameBlurHandler}
+            value={firstNameValue}
+          />
+          {firstNameInputHasError && (
+            <p className="error-text">Please enter a first name.</p>
+          )}
+        </div>
+        <div className={lastNameInputClasses}>
+          <label htmlFor="name">Last Name</label>
+          <input
+            type="text"
+            id="name"
+            onChange={lastNameChangeHandler}
+            onBlur={lastNameBlurHandler}
+            value={lastNameValue}
+          />
+          {lastNameInputHasError && (
+            <p className="error-text">Please enter a last name.</p>
+          )}
+        </div>
       </div>
       <div className={emailInputClasses}>
         <label htmlFor="name">E-Mail Address</label>
